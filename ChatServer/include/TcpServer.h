@@ -9,7 +9,7 @@
 class TcpServer
 {
     public:
-        TcpServer(char *ip, short port, int pth_num);
+        TcpServer(const char *ip, short port, int pth_num);
         ~TcpServer(){};
         void run();
         

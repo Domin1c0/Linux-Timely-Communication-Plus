@@ -68,7 +68,7 @@ void sock_pair_cb(int fd, short event, void *arg)
     }
 }
 
-TcpServer::TcpServer(char *ip, short port, int pth_num)
+TcpServer::TcpServer(const char *ip, short port, int pth_num)
 {
     try
     {
@@ -143,7 +143,7 @@ void TcpServer::get_sock_pair()
     for(int i = 0; i < _pth_num; i++)
     {
         int pair[2];
-        if(socketpair(AF_INET, SOCK_STREAM, 0, pair) == -1)
+        if(socketpair(AF_UNIX, SOCK_STREAM, 0, pair) == -1)
         {
             throw std::runtime_error("socketpair creation failed: " + std::string(strerror(errno)));
         }

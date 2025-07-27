@@ -8,6 +8,52 @@
 #include"MyPthread.h"
 #include"wrap.h"
 
+// 客户端回调函数：处理客户端消息
+void client_cb(int fd, short event, void *arg)
+{
+    try {
+        Pthread *mythis = (Pthread *)arg;
+        char buff[128] = {0};
+
+        ssize_t n = recv(fd, buff, sizeof(buff) - 1, 0);
+        if (n < 0) 
+        {
+            throw std::runtime_error("recv failed: " + std::string(strerror(errno)));
+        }
+        if (n == 0) 
+        {
+            // 客户端断开
+            std::cout << "[Info] Client disconnected: fd=" << fd << std::endl;
+
+            // 删除事件
+            auto it = mythis->_event_map.find(fd);
+            if (it != mythis->_event_map.end()) 
+            {
+                event_del(it->second);
+                event_free(it->second);
+                mythis->_event_map.erase(it);
+            }
+
+            Close(fd);
+            return;
+        }
+
+        std::cout << "[Recv] from client(" << fd << "): " << buff << std::endl;
+
+        //返发送给客户端
+        ssize_t sent = send(fd, buff, n, 0);
+        if (sent < 0) {
+            std::cerr << "send error on fd " << fd << std::endl;
+        }
+        // 调用业务逻辑
+        //control_sever.process(fd, buff);
+    } 
+    catch (const std::exception &e) 
+    {
+        std::cerr << "[Exception in client_cb] " << e.what() << std::endl;
+    }
+}
+
 // socketpair 回调：接收主线程发来的客户端 fd
 void sock_pair_1_cb(int fd, short event, void *arg)
 {
@@ -56,47 +102,6 @@ void sock_pair_1_cb(int fd, short event, void *arg)
     catch (const std::exception &e) 
     {
         std::cerr << "[Exception in sock_pair_1_cb] " << e.what() << std::endl;
-    }
-}
-
-// 客户端回调函数：处理客户端消息
-void client_cb(int fd, short event, void *arg)
-{
-    try {
-        Pthread *mythis = (Pthread *)arg;
-        char buff[128] = {0};
-
-        ssize_t n = recv(fd, buff, sizeof(buff) - 1, 0);
-        if (n < 0) 
-        {
-            throw std::runtime_error("recv failed: " + std::string(strerror(errno)));
-        }
-        if (n == 0) 
-        {
-            // 客户端断开
-            std::cout << "[Info] Client disconnected: fd=" << fd << std::endl;
-
-            // 删除事件
-            auto it = mythis->_event_map.find(fd);
-            if (it != mythis->_event_map.end()) 
-            {
-                event_del(it->second);
-                event_free(it->second);
-                mythis->_event_map.erase(it);
-            }
-
-            Close(fd);
-            return;
-        }
-
-        std::cout << "[Recv] from client(" << fd << "): " << buff << std::endl;
-
-        // 调用业务逻辑
-        //control_sever.process(fd, buff);
-    } 
-    catch (const std::exception &e) 
-    {
-        std::cerr << "[Exception in client_cb] " << e.what() << std::endl;
     }
 }
 
