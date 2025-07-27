@@ -32,27 +32,27 @@ void Register::process(int fd, std::string &json)
 
         if (mysql_fetch_row(res)) 
         {
-            _str = "register fail! username exists.";
+            _responseStr = "register fail! username exists.";
         } 
         else 
         {
             // 插入新用户
             std::string insert_sql = "INSERT INTO user(name, passwd) VALUES('" + name + "', '" + pw + "');";
             db.execute(insert_sql);
-            _str = "register success!";
+            _responseStr = "register success!";
         }
         mysql_free_result(res);
 
     } 
     catch (const std::exception& e) 
     {
-        _str = std::string("Database error: ") + e.what();
+        _responseStr = std::string("Database error: ") + e.what();
     }
 }
 
 void Register::response()
 {
-    if (send(_fd, _str.c_str(), _str.size(), 0) == -1)
+    if (send(_fd, _responseStr.c_str(), _responseStr.size(), 0) == -1)
     {
         std::cerr << "send failed: " << strerror(errno) << std::endl;
     }

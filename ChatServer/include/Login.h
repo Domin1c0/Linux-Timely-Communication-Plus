@@ -13,7 +13,7 @@ public:
     void response() override;
 private:
     int _fd;
-    std::string _str;
+    std::string _responseStr;
     std::string _name;
     MysqlWrapper* _db;
 };

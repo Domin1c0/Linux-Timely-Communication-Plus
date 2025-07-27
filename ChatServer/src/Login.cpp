@@ -32,7 +32,7 @@ void Login::process(int fd, std::string &json)
     MYSQL_RES* res = _db->query(checkUser.str());
 
     if (!mysql_fetch_row(res)) {
-        _str = "login fail! (user not found or wrong password)";
+        _responseStr = "login fail! (user not found or wrong password)";
         mysql_free_result(res);
         return;
     }
@@ -44,7 +44,7 @@ void Login::process(int fd, std::string &json)
     res = _db->query(checkOnline.str());
 
     if (mysql_fetch_row(res)) {
-        _str = "login fail! (user already online)";
+        _responseStr = "login fail! (user already online)";
         mysql_free_result(res);
         return;
     }
@@ -61,7 +61,7 @@ void Login::process(int fd, std::string &json)
 void Login::response()
 {
 
-    if (send(_fd, _str.c_str(), _str.size(), 0) < 0) {
+    if (send(_fd, _responseStr.c_str(), _responseStr.size(), 0) < 0) {
         std::cerr << "send error" << std::endl;
     }
 
