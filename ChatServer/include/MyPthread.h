@@ -7,7 +7,7 @@
 class Pthread
 {
     public:
-        Pthread(int sock_fd);
+        Pthread(int sock_fd, Control* control);
         ~Pthread();
 
     private:
@@ -15,6 +15,7 @@ class Pthread
         struct event_base* _base;
         std::map<int,struct event*> _event_map;
         pthread_t _pthread;
+        Control* _control;
 
         friend void sock_pair_1_cb(int fd, short event, void *arg);
         friend void client_cb(int fd, short event, void *arg);

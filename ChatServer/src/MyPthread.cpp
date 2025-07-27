@@ -5,14 +5,17 @@
 #include <cstdlib>
 #include <string.h>
 #include <unistd.h>
+#include"Control.h"
 #include"MyPthread.h"
 #include"wrap.h"
+
+extern Control* ccontrol_sever_ptr;
 
 // 客户端回调函数：处理客户端消息
 void client_cb(int fd, short event, void *arg)
 {
     try {
-        Pthread *mythis = (Pthread *)arg;
+        Pthread *mythis = static_cast<Pthread *>(arg);
         char buff[128] = {0};
 
         ssize_t n = recv(fd, buff, sizeof(buff) - 1, 0);
@@ -46,7 +49,9 @@ void client_cb(int fd, short event, void *arg)
             std::cerr << "send error on fd " << fd << std::endl;
         }
         // 调用业务逻辑
-        //control_sever.process(fd, buff);
+        //control_sever.process(fd, std::string(buff));
+        std::string msg(buff, n);
+        mythis->_control->process(fd, msg);
     } 
     catch (const std::exception &e) 
     {
@@ -136,9 +141,9 @@ void *pthread_run(void *arg)
     return nullptr;
 }
 
-Pthread::Pthread(int sock_fd)
+Pthread::Pthread(int sock_fd, Control* control)
+    : _sock_fd(sock_fd), _control(control)
 {
-    _sock_fd = sock_fd;
     _base = event_base_new();
     if(!_base)
     {

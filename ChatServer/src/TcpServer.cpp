@@ -68,18 +68,21 @@ void sock_pair_cb(int fd, short event, void *arg)
     }
 }
 
-TcpServer::TcpServer(const char *ip, short port, int pth_num)
+TcpServer::TcpServer(const char *ip, short port, int pth_num, Control* control)
+    : _pth_num(pth_num), _control(control)
 {
     try
     {
         //创建服务器
-        _pth_num = pth_num;
         _listen_fd = Socket(AF_INET, SOCK_STREAM, 0);
 
         struct sockaddr_in serv_addr;
         serv_addr.sin_family = AF_INET;
         serv_addr.sin_port = htons(port);
         serv_addr.sin_addr.s_addr = inet_addr(ip);
+
+        int opt = 1;
+        setsockopt(_listen_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 
         Bind(_listen_fd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
         Listen(_listen_fd, 128);
@@ -161,7 +164,7 @@ void TcpServer::get_pthread()
     {
         try
         {
-            _pthread.push_back(new Pthread(_socket_pair[i].getWriteFd()));
+            _pthread.push_back(new Pthread(_socket_pair[i].getWriteFd(), _control));
         }
         catch(const std::exception& e)
         {

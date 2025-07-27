@@ -144,7 +144,11 @@ ChatServer/CMakeFiles/chat_server.dir/src/MysqlWrapper.cpp.o: \
  /usr/include/c++/14/bits/exception_ptr.h \
  /usr/include/c++/14/bits/cxxabi_init_exception.h \
  /usr/include/c++/14/typeinfo /usr/include/c++/14/bits/nested_exception.h \
- /usr/include/c++/14/iostream /usr/include/c++/14/ostream \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Global.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/MysqlWrapper.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Control.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
+ /usr/include/c++/14/cstdint /usr/include/c++/14/istream \
  /usr/include/c++/14/ios /usr/include/c++/14/bits/ios_base.h \
  /usr/include/c++/14/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
@@ -183,6 +187,79 @@ ChatServer/CMakeFiles/chat_server.dir/src/MysqlWrapper.cpp.o: \
  /usr/include/c++/14/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_inline.h \
  /usr/include/c++/14/bits/locale_facets.tcc \
- /usr/include/c++/14/bits/basic_ios.tcc \
- /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc
+ /usr/include/c++/14/bits/basic_ios.tcc /usr/include/c++/14/ostream \
+ /usr/include/c++/14/bits/ostream.tcc \
+ /usr/include/c++/14/bits/istream.tcc /usr/include/c++/14/memory \
+ /usr/include/c++/14/bits/stl_tempbuf.h \
+ /usr/include/c++/14/bits/stl_uninitialized.h \
+ /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/14/bits/align.h /usr/include/c++/14/bits/unique_ptr.h \
+ /usr/include/c++/14/bits/shared_ptr.h \
+ /usr/include/c++/14/bits/shared_ptr_base.h \
+ /usr/include/c++/14/bits/allocated_ptr.h \
+ /usr/include/c++/14/ext/aligned_buffer.h \
+ /usr/include/c++/14/ext/concurrence.h \
+ /usr/include/c++/14/bits/shared_ptr_atomic.h \
+ /usr/include/c++/14/bits/atomic_base.h \
+ /usr/include/c++/14/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/14/backward/auto_ptr.h \
+ /usr/include/c++/14/pstl/glue_memory_defs.h \
+ /usr/include/c++/14/pstl/execution_defs.h /usr/include/c++/14/sstream \
+ /usr/include/c++/14/bits/sstream.tcc \
+ /usr/include/jsoncpp/json/allocator.h /usr/include/c++/14/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/json_features.h \
+ /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/c++/14/array \
+ /usr/include/c++/14/compare /usr/include/c++/14/map \
+ /usr/include/c++/14/bits/stl_tree.h \
+ /usr/include/c++/14/bits/node_handle.h \
+ /usr/include/c++/14/bits/stl_map.h \
+ /usr/include/c++/14/bits/stl_multimap.h \
+ /usr/include/c++/14/bits/erase_if.h /usr/include/c++/14/vector \
+ /usr/include/c++/14/bits/stl_vector.h \
+ /usr/include/c++/14/bits/stl_bvector.h \
+ /usr/include/c++/14/bits/vector.tcc /usr/include/c++/14/deque \
+ /usr/include/c++/14/bits/stl_deque.h /usr/include/c++/14/bits/deque.tcc \
+ /usr/include/c++/14/stack /usr/include/c++/14/bits/stl_stack.h \
+ /usr/include/jsoncpp/json/writer.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/View.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Public.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Register.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Login.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Talk_one.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Talk_group.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Exit.h \
+ /usr/include/event.h /usr/include/event2/event-config.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/evutil.h \
+ /usr/include/event2/util.h /usr/include/event2/visibility.h \
+ /usr/include/netdb.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
+ /usr/include/x86_64-linux-gnu/bits/socket2.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h \
+ /usr/include/event2/event_struct.h /usr/include/event2/keyvalq_struct.h \
+ /usr/include/event2/event.h /usr/include/event2/event_compat.h \
+ /usr/include/event2/buffer.h /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
+ /usr/include/event2/buffer_compat.h /usr/include/event2/bufferevent.h \
+ /usr/include/event2/bufferevent_struct.h \
+ /usr/include/event2/bufferevent_compat.h /usr/include/event2/tag.h \
+ /usr/include/event2/tag_compat.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Get_List.h \
+ /usr/include/c++/14/iostream

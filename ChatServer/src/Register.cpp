@@ -4,10 +4,11 @@
 #include <jsoncpp/json/json.h>
 #include<sys/socket.h>
 #include<mysql/mysql.h>
+#include"Global.h"
 #include"Register.h"
 #include"MysqlWrapper.h"
 
-extern MysqlWrapper Mysql_server;
+extern MysqlWrapper* Mysql_server;
 
 void Register::process(int fd, std::string &json) 
 {
@@ -24,11 +25,10 @@ void Register::process(int fd, std::string &json)
     std::string pw = root["pw"].asString();
 
     try {
-        MysqlWrapper db("127.0.0.1", "root", "password", "chat");
 
         // 检查用户名是否存在
         std::string check_sql = "SELECT * FROM user WHERE name='" + name + "';";
-        MYSQL_RES* res = db.query(check_sql);
+        MYSQL_RES* res = Mysql_server->query(check_sql);
 
         if (mysql_fetch_row(res)) 
         {
@@ -38,7 +38,7 @@ void Register::process(int fd, std::string &json)
         {
             // 插入新用户
             std::string insert_sql = "INSERT INTO user(name, passwd) VALUES('" + name + "', '" + pw + "');";
-            db.execute(insert_sql);
+            Mysql_server->execute(insert_sql);
             _responseStr = "register success!";
         }
         mysql_free_result(res);

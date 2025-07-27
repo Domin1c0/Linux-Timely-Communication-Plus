@@ -4,12 +4,13 @@
 #include<memory>
 #include<event.h>
 #include<map>
+#include"Control.h"
 #include"MyPthread.h"
 
 class TcpServer
 {
     public:
-        TcpServer(const char *ip, short port, int pth_num);
+        TcpServer(const char *ip, short port, int pth_num, Control* control);
         ~TcpServer(){};
         void run();
         
@@ -30,11 +31,14 @@ class TcpServer
     private:
         int _listen_fd = -1; //监听套接字
         int _pth_num; //启动的线程的个数
+        Control* _control;//保存control指针
 
         struct event_base *_base;
         // std::unique_ptr<event_base,void(*)(event_base *)> _base;
         // libevent事件主循环，使用unique_ptr自动释放
         // std::unique_ptr<event_base, decltype(&event_base_free)> _base;
+
+        
         
         std::vector<PipePair> _socket_pair;
         std::vector<Pthread*> _pthread; //子线程对象

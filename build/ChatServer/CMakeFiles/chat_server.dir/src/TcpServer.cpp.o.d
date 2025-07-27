@@ -226,6 +226,41 @@ ChatServer/CMakeFiles/chat_server.dir/src/TcpServer.cpp.o: \
  /usr/include/c++/14/bits/stl_map.h \
  /usr/include/c++/14/bits/stl_multimap.h \
  /usr/include/c++/14/bits/erase_if.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Control.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
+ /usr/include/c++/14/cstdint /usr/include/c++/14/sstream \
+ /usr/include/c++/14/bits/sstream.tcc \
+ /usr/include/jsoncpp/json/allocator.h /usr/include/c++/14/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/json_features.h \
+ /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/c++/14/array \
+ /usr/include/c++/14/compare /usr/include/c++/14/deque \
+ /usr/include/c++/14/bits/stl_deque.h /usr/include/c++/14/bits/deque.tcc \
+ /usr/include/c++/14/stack /usr/include/c++/14/bits/stl_stack.h \
+ /usr/include/jsoncpp/json/writer.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/View.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Public.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/MysqlWrapper.h \
+ /usr/include/mysql/mysql.h \
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h \
+ /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
+ /usr/include/mysql/mysql_com.h /usr/include/mysql/my_command.h \
+ /usr/include/mysql/my_compress.h \
+ /usr/include/mysql/udf_registration_types.h \
+ /usr/include/mysql/client_plugin.h /usr/include/c++/14/stdlib.h \
+ /usr/include/mysql/plugin_auth_common.h \
+ /usr/include/mysql/mysql_version.h /usr/include/mysql/mysql_time.h \
+ /usr/include/mysql/errmsg.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Register.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Login.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Talk_one.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Talk_group.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Exit.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Get_List.h \
  /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/MyPthread.h \
  /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/wrap.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -236,7 +271,4 @@ ChatServer/CMakeFiles/chat_server.dir/src/TcpServer.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/c++/14/cstring \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
- /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/linux/close_range.h

@@ -1,4 +1,5 @@
 #include"MysqlWrapper.h"
+#include"Global.h"
 #include<iostream>
 #include<stdexcept>
 

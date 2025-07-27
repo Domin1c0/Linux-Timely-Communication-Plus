@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 
-# 客户端模块
 project(ChatClient)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # 头文件目录
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
@@ -13,6 +14,7 @@ file(GLOB CLIENT_SRC
 
 add_executable(chat_client ${CLIENT_SRC})
 
+# 链接库
 target_link_libraries(chat_client
     pthread
     jsoncpp

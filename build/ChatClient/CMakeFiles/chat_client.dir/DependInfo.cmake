@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatClient/src/ClientApp.cpp" "ChatClient/CMakeFiles/chat_client.dir/src/ClientApp.cpp.o" "gcc" "ChatClient/CMakeFiles/chat_client.dir/src/ClientApp.cpp.o.d"
   "/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatClient/src/NetworkManager.cpp" "ChatClient/CMakeFiles/chat_client.dir/src/NetworkManager.cpp.o" "gcc" "ChatClient/CMakeFiles/chat_client.dir/src/NetworkManager.cpp.o.d"
   "/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatClient/src/main.cpp" "ChatClient/CMakeFiles/chat_client.dir/src/main.cpp.o" "gcc" "ChatClient/CMakeFiles/chat_client.dir/src/main.cpp.o.d"
-  "" "ChatClient/chat_client" "gcc" "ChatClient/CMakeFiles/chat_client.dir/link.d"
+  "" "bin/chat_client" "gcc" "ChatClient/CMakeFiles/chat_client.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -234,4 +234,30 @@ ChatServer/CMakeFiles/chat_server.dir/src/Register.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/socket2.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Global.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Control.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Public.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Register.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Login.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Talk_one.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Talk_group.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Exit.h \
+ /usr/include/event.h /usr/include/event2/event-config.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/evutil.h \
+ /usr/include/event2/util.h /usr/include/event2/visibility.h \
+ /usr/include/netdb.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h \
+ /usr/include/event2/event_struct.h /usr/include/event2/keyvalq_struct.h \
+ /usr/include/event2/event.h /usr/include/event2/event_compat.h \
+ /usr/include/event2/buffer.h /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
+ /usr/include/event2/buffer_compat.h /usr/include/event2/bufferevent.h \
+ /usr/include/event2/bufferevent_struct.h \
+ /usr/include/event2/bufferevent_compat.h /usr/include/event2/tag.h \
+ /usr/include/event2/tag_compat.h \
+ /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/Get_List.h \
  /home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/ChatServer/include/MysqlWrapper.h
