@@ -1,6 +1,7 @@
 #ifndef GET_LIST_H
 #define GET_LIST_H
 
+#include "MysqlWrapper.h"
 #include "View.h"
 #include <string>
 #include <vector>

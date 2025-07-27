@@ -1,6 +1,7 @@
 #ifndef REGISTER_H
 #define REGISTER_H
 #include"View.h"
+#include "MysqlWrapper.h"
 
 class Register : public View
 {

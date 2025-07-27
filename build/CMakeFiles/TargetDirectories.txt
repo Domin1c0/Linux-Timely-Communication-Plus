@@ -1,0 +1,8 @@
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/CMakeFiles/edit_cache.dir
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/CMakeFiles/rebuild_cache.dir
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/ChatServer/CMakeFiles/chat_server.dir
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/ChatServer/CMakeFiles/edit_cache.dir
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/ChatServer/CMakeFiles/rebuild_cache.dir
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/ChatClient/CMakeFiles/chat_client.dir
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/ChatClient/CMakeFiles/edit_cache.dir
+/home/domin1c/CODE/CppProject/Linux-Timely-Communication-Project/build/ChatClient/CMakeFiles/rebuild_cache.dir

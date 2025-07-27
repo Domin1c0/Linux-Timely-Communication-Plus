@@ -5,14 +5,13 @@
 #include <iostream>
 #include<sys/socket.h>
 
-extern MysqlWrapper* db;  // 假设你有全局的数据库连接指针
 
 void Get_List::process(int fd, std::string& json) {
     _fd = fd;
     _onlineUsers.clear();
 
     std::string sql = "SELECT name FROM online;";
-    MYSQL_RES* res = db->query(sql);
+    MYSQL_RES* res = _db->query(sql);
     if (!res) {
         std::cerr << "Failed to query online users" << std::endl;
         _responseStr = "[]";  // 返回空列表
