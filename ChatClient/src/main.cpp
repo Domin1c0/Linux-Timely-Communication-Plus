@@ -5,7 +5,7 @@
 int main() {
     NetworkManager network;
 
-    if (!network.connectToServer("127.0.0.1", 5555)) {
+    if (!network.connectToServer("192.168.31.61", 5555)) {
         std::cerr << "Failed to connect to server!\n";
         return 1;
     }

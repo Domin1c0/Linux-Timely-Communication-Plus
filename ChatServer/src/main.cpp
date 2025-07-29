@@ -19,7 +19,7 @@ int main()
         static Control control(&db, eventMap);
         control_server = &control;
 
-        TcpServer server("0.0.0.0", 5555, 4, control_server);
+        TcpServer server("192.168.31.61", 5555, 4, control_server);
         server.run();
     } 
     catch(const std::exception& e) {
