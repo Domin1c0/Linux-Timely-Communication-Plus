@@ -1,5 +1,67 @@
+# === 通用忽略规则 ===
+
+# 构建输出目录（主项目及子模块）
+build/
+ChatClient/build/
 ChatServer/build/
+
+# 所有 CMake 生成文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# ChatClient 和 ChatServer 中的 CMake 生成文件
+ChatClient/CMakeFiles/
+ChatClient/Makefile
+ChatClient/cmake_install.cmake
+
+ChatServer/CMakeFiles/
+ChatServer/Makefile
+ChatServer/cmake_install.cmake
+
+# 可执行文件和中间文件
+*.o
+*.o.d
+*.obj
+*.exe
+*.out
+*.a
+*.lib
+*.so
+*.dll
+
+# 编译目录
+**/bin/
+**/CMakeFiles/
+
+# 临时文件（编辑器/系统）
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# VSCode 或其他 IDE 的配置
+.vscode/
+.idea/
+*.userChatServer/build/
 *.o
 *.out
 *.log
 *.swp
+ChatClient/build/
+*.o
+*.out
+*.log
+*.swp
+build/
+*.sln
+*.VC.db
+*.VC.VC.opendb
+
+# 忽略测试或缓存文件（可选）
+*.json.result
+*.cache
+*.pid
